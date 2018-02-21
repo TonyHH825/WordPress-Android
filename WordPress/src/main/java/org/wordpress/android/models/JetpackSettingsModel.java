@@ -16,6 +16,7 @@ public class JetpackSettingsModel {
     public boolean ssoActive;
     public boolean ssoMatchEmail;
     public boolean ssoRequireTwoFactor;
+    public boolean commentLikes;
 
     public JetpackSettingsModel() {
         super();
@@ -35,6 +36,7 @@ public class JetpackSettingsModel {
         ssoActive = other.ssoActive;
         ssoMatchEmail = other.ssoMatchEmail;
         ssoRequireTwoFactor = other.ssoRequireTwoFactor;
+        commentLikes = other.commentLikes;
         jetpackProtectWhitelist.addAll(other.jetpackProtectWhitelist);
     }
 
@@ -49,6 +51,7 @@ public class JetpackSettingsModel {
                 ssoActive == otherModel.ssoActive &&
                 ssoMatchEmail == otherModel.ssoMatchEmail &&
                 ssoRequireTwoFactor == otherModel.ssoRequireTwoFactor &&
+                commentLikes == otherModel.commentLikes &&
                 whitelistMatches(otherModel.jetpackProtectWhitelist);
     }
 

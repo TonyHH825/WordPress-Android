@@ -539,7 +539,7 @@ public abstract class SiteSettingsInterface {
     }
 
     public boolean getAllowCommentLikes() {
-        return mSettings.allowCommentLikes;
+        return mJpSettings.commentLikes;
     }
 
     public @NonNull String getTwitterUsername() {
@@ -807,6 +807,7 @@ public abstract class SiteSettingsInterface {
 
     public void setAllowCommentLikes(boolean allowCommentLikes) {
         mSettings.allowCommentLikes = allowCommentLikes;
+        mJpSettings.commentLikes = allowCommentLikes;
     }
 
     public void setTwitterUsername(String twitterUsername) {
